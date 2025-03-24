@@ -1,0 +1,84 @@
+{
+    "technicalLanguage": [
+        {
+            "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
+            "label": "HTML"
+        },
+        {
+            "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968242.png",
+            "label": "CSS"
+        },
+        {
+            "icon": "https://img.icons8.com/color/512/javascript.png",
+            "label": "JavaScript"
+        },
+        {
+            "icon": "https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000",
+            "label": "TypeScripts"
+        },
+        {
+            "icon": "https://img.icons8.com/?size=100&id=54087&format=png&color=000000",
+            "label": "NodeJS"
+        }
+    ],
+    "framework": [
+        {
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+            "label": "React"
+        },
+        {
+            "icon": "https://img.icons8.com/fluent/512/nextjs.png",
+            "label": "NextJS"
+        },
+        {
+            "icon": "https://static-00.iconduck.com/assets.00/vue-js-icon-2048x1766-btrgkrhi.png",
+            "label": "VueJS"
+        },
+        {
+            "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
+            "label": "TailwindCSS"
+        },
+        {
+            "icon": "https://static-00.iconduck.com/assets.00/nestjs-icon-1024x1020-34exj0g6.png",
+            "label": "NestJS"
+        },
+        {
+            "icon": "https://img.icons8.com/?size=512&id=SDVmtZ6VBGXt&format=png",
+            "label": "Express"
+        },
+        {
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqbJ9JhRpr3a93mw4I7DCdBire7-FN4Am1FQ&s",
+            "label": "TypeORM"
+        },
+        {
+            "icon": "https://static-00.iconduck.com/assets.00/prisma-icon-423x512-isxs6996.png",
+            "label": "Prisma"
+        }
+    ],
+    "tools": [
+        {
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+            "label": "Git"
+        },
+        {
+            "icon": "https://cdn-icons-png.flaticon.com/512/25/25231.png",
+            "label": "GitHub"
+        },
+        {
+            "icon": "https://static-00.iconduck.com/assets.00/docker-icon-2048x1753-uguk29a7.png",
+            "label": "Docker"
+        },
+        {
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCKO8LEqIHU8A0GDfApzkBqY5hv_LiDxATJw&s",
+            "label": "VS Code"
+        },
+        {
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJwbzJZ69SSTLQe8ySIgIMMB68JLukoIkJfQ&s",
+            "label": "Postman"
+        },
+        {
+            "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQerGEWZxlTG4jra5dMGs4mUz8DWvZmuIEkoQ&s",
+            "label": "AWS"
+        }
+    ]
+}

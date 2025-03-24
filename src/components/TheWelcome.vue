@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
-import ItemBox from './ItemsBox.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
+import SkillBox from './SkillBox.vue'
+import ListIcon from './icons/IconList.vue'
+import skillsData from '../configs/skills.json'
 
 import { ref } from 'vue'
 
@@ -14,12 +15,12 @@ const show = ref(false)
   <button @click="show = false">List</button>
   <Transition>
     <div v-if="show">
-      <div class="wrapper">
-        <ItemBox> </ItemBox>
-      </div>
+      <SkillBox :skills="skillsData.technicalLanguage" />
+      <SkillBox :skills="skillsData.framework" />
+      <SkillBox :skills="skillsData.tools" />
       <WelcomeItem>
         <template #icon>
-          <DocumentationIcon />
+          <ListIcon />
         </template>
         <template #heading>Documentation</template>
 
@@ -32,6 +33,12 @@ const show = ref(false)
 </template>
 
 <style scoped>
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
