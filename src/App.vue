@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import SkillPage from './components/SkillPage.vue'
+import ProfileSection from './components/ProfileSection.vue';
+import SkillSection from './components/SkillSection.vue'
 </script>
 
 <template>
-  <main>
-    <SkillPage />
+  <main class="wrapper">
+    <div class="left-side">
+      <ProfileSection />
+    </div>
+    <div class="right-side">
+      <SkillSection />
+    </div>
   </main>
 </template>
 
@@ -20,6 +26,25 @@ header {
 
 main {
   width: 100%;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  align-items: start;
+}
+
+.left-side {
+  position: relative;
+  min-width: 35%;
+  display: flex;
+  justify-content: center;
+  padding-inline: calc(var(--section-gap) / 2);
+  padding-block: calc(var(--section-gap) / 4);
+}
+
+.right-side {
+  flex: 1;
+  padding-inline: calc(var(--section-gap) / 2);
+  padding-block: calc(var(--section-gap) / 4);
 }
 
 @media (min-width: 1024px) {
@@ -31,12 +56,6 @@ main {
 
   .logo {
     margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>
