@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import GithubIcon from './icons/GithubIcon.vue';
 import LinkedinIcon from './icons/LinkedinIcon.vue';
+import CalendarIcon from './icons/CalendarIcon.vue';
+import LocationIcon from './icons/LocationIcon.vue';
+import MailIcon from './icons/MailIcon.vue';
+import PhoneIcon from './icons/PhoneIcon.vue';
 
 const handleButtonClick = (link: string) => {
     window.open(link)
@@ -10,19 +14,38 @@ const handleButtonClick = (link: string) => {
 
 <template>
     <div class="profile-wrapper">
-        <img class="profile-image"
-            src="https://images.unsplash.com/photo-1624397642005-4a8b6cb9b4ca?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         <div class="profile-content">
-            <p><span>Name : </span>Ariya Watchara-apanukorn</p>
-            <p><span>Age : </span> 22</p>
-            <div class="badge">Full-stack Developer</div>
-            <div class="flex-box">
-                <button class="icon" @click="handleButtonClick('https://google.com')">
-                    <GithubIcon />
-                </button>
-                <button class="icon" @click="handleButtonClick('https://google.com')">
-                    <LinkedinIcon />
-                </button>
+            <div class="top-box">
+                <img class="profile-image"
+                    src="https://images.unsplash.com/photo-1624397642005-4a8b6cb9b4ca?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                <h5>Ariya Watchara-apanukorn</h5>
+                <div class="badge">Full-stack Developer</div>
+                <div class="icons-box">
+                    <button class="icon" @click="handleButtonClick('https://google.com')">
+                        <GithubIcon />
+                    </button>
+                    <button class="icon" @click="handleButtonClick('https://google.com')">
+                        <LinkedinIcon />
+                    </button>
+                </div>
+            </div>
+            <div class="contact-info under-box">
+                <div>
+                    <CalendarIcon />
+                    November 3, 2002
+                </div>
+                <div>
+                    <LocationIcon />
+                    Bangkok, Thailand
+                </div>
+                <div>
+                    <MailIcon />
+                    ariya.watcharaapanukorn@gmail.com
+                </div>
+                <div>
+                    <PhoneIcon />
+                    +66 90-941-9895
+                </div>
             </div>
         </div>
     </div>
@@ -30,19 +53,37 @@ const handleButtonClick = (link: string) => {
 
 <style scoped>
 .profile-wrapper {
-    position: fixed;
+    position: relative;
     flex: 1;
 }
 
+@media (min-width: 1024px) {
+    .profile-wrapper {
+        position: fixed;
+    }
+}
+
 .profile-content {
-    width: 350px;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 1rem;
-    border-radius: 1rem;
-    gap: 1rem;
     transition: all 1s ease;
-    margin-bottom: 1rem;
     filter: drop-shadow(0 9px 7px rgb(0 0 0 / 0.1));
+
+}
+
+.top-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.under-box {
+    padding: 1rem;
+    background-color: rgb(190, 190, 190, 0.75);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .profile-image {
@@ -52,6 +93,8 @@ const handleButtonClick = (link: string) => {
     object-position: center;
     border-radius: 20px;
     padding: 2px;
+    margin-top: -75px;
+    margin-inline: auto;
 }
 
 .badge {
@@ -67,11 +110,33 @@ const handleButtonClick = (link: string) => {
     margin-inline: auto;
 }
 
-.flex-box {
-    margin-top: 20px;
+.icons-box {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(175, 175, 175);
+    gap: 10px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #000;
+}
+
+.contact-info svg {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon {

@@ -29,25 +29,30 @@ main {
   position: relative;
   overflow-y: auto;
   display: flex;
+  flex-direction: column;
   align-items: start;
+  gap: 2rem;
 }
 
 .left-side {
   position: relative;
-  min-width: 35%;
+  min-width: 25rem;
   display: flex;
   justify-content: center;
-  padding-inline: calc(var(--section-gap) / 2);
-  padding-block: calc(var(--section-gap) / 4);
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .right-side {
+  width: 100%;
   flex: 1;
-  padding-inline: calc(var(--section-gap) / 2);
-  padding-block: calc(var(--section-gap) / 4);
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 @media (min-width: 1024px) {
+  main {
+    flex-direction: row;
+  }
+
   header {
     display: flex;
     place-items: center;
@@ -57,5 +62,6 @@ main {
   .logo {
     margin: 0 2rem 0 0;
   }
+
 }
 </style>

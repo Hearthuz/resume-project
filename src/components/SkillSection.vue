@@ -39,7 +39,7 @@ const show = ref(false)
   flex: 1;
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8);
   filter: drop-shadow(0 9px 7px rgb(0 0 0 / 0.1));
 }
 
