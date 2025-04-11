@@ -16,10 +16,10 @@ const show = ref(false)
       <h1>Technical Skills</h1>
       <SwitchButton v-model="show">
         <template #iconLeft>
-          <WidgetIcon style="color: black;" />
+          <WidgetIcon style="color: black" />
         </template>
         <template #iconRight>
-          <ListIcon style="color: black;" />
+          <ListIcon style="color: black" />
         </template>
       </SwitchButton>
     </div>
@@ -29,18 +29,12 @@ const show = ref(false)
       <SkillBox :title="'Other Tools'" :skills="skillsData.tools" :show="show" />
     </div>
   </div>
-
 </template>
 
 <style scoped>
 .skill-wrapper {
   width: 100%;
   height: 100%;
-  flex: 1;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  filter: drop-shadow(0 9px 7px rgb(0 0 0 / 0.1));
 }
 
 .header {
@@ -48,14 +42,5 @@ const show = ref(false)
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-}
-
-main {
-  width: 100%;
-  height: 100%;
-}
-
-h1 {
-  font-weight: 700;
 }
 </style>
